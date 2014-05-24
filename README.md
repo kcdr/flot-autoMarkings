@@ -1,2 +1,2 @@
-flot-autoMarkings
+AutoMarkings Plugin for Flot
 =================
