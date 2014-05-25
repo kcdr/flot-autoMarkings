@@ -1,4 +1,7 @@
-/**
+/** AutoMarkings Plugin for flot
+ * https://github.com/kcdr/flot-autoMarkings/edit/master/README.md
+ * 
+ * Licensed under the MIT license.
  * 
  */
 
@@ -30,14 +33,16 @@
 	        			}
                     }
                     
+                    var seriesColor = this.autoMarkings.color || this.color;
+                    
 	        		if( this.autoMarkings.showMinMax === true && this.autoMarkings.min!=Number.MAX_VALUE && this.autoMarkings.max!=0 )
 	        		{
-	        			plot.getOptions().grid.markings.push({ yaxis: { from: this.autoMarkings.min, to: this.autoMarkings.max }, color: this.color.replace('rgb(','rgba(').replace(')',','+this.autoMarkings.minMaxAlpha+')') });
+	        			plot.getOptions().grid.markings.push({ yaxis: { from: this.autoMarkings.min, to: this.autoMarkings.max }, color: seriesColor.replace('rgb(','rgba(').replace(')',','+this.autoMarkings.minMaxAlpha+')') });
 	        		}
 	        		if( this.autoMarkings.showAvg === true && this.autoMarkings.avg!=Number.NaN)
 	        		{
 	        			if( this.autoMarkings.avg!=null )
-	        				plot.getOptions().grid.markings.push({ yaxis: { from: this.autoMarkings.avg, to: this.autoMarkings.avg }, color: this.color });
+	        				plot.getOptions().grid.markings.push({ yaxis: { from: this.autoMarkings.avg, to: this.autoMarkings.avg }, color: seriesColor });
 	        		}
         		}
         	});
@@ -50,6 +55,7 @@
     
     /** Options
      * enabled
+     * color
      * showMinMax
      * minMaxAlpha
      * showAvg
