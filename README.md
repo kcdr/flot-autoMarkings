@@ -13,7 +13,12 @@ Download and include the javaScript-file on your page:
 ```
 
 ## Options ##
-* enabled: [true|false] Enable or disable autoMarkings. Default: false
+### enabled ###
+Value: true or false 
+
+Enable or disable autoMarkings. 
+
+Default: false
 * color: [String e.g. "rgb(237,194,64)"] Color to use for drawing the marking of the series. If not given the plugin will use the color calculated by flot for each series.
 * showMinMax: [true|false] Draw a marking between the minimum and maximum of the series data. Default: false
 * minMaxAlpha: [doubleValue] Alpha value of minMax markings color. Default: 0.2
@@ -23,7 +28,7 @@ Download and include the javaScript-file on your page:
 * avg: [doubleValue] The average value of the series data. If not given the plugin will automatically calculate this value.
 
 Options can be set inside the 'series' option of the plot. Flot will then copy these to each series.
-```js
+```javascript
 var options = {
   series: {
     autoMarkings= {
