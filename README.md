@@ -42,6 +42,7 @@ Value: [double]
 The average value of the series data. If not given the plugin will automatically calculate this value.  
 Value: [double]
 
+
 Options can be set inside the 'series' option of the plot. Flot will then copy these to each series.
 ```javascript
 var options = {
