@@ -5,7 +5,6 @@
  * 
  */
 
-
 (function ($) {
     function init(plot) {
 
