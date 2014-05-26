@@ -35,14 +35,19 @@
                     
                     var seriesColor = this.autoMarkings.color || this.color;
                     
+                    var axis = "y"+(this.yaxis.n>1?this.yaxis.n:"")+"axis";
+                    
 	        		if( this.autoMarkings.showMinMax === true && this.autoMarkings.min!=Number.MAX_VALUE && this.autoMarkings.max!=0 )
 	        		{
-	        			plot.getOptions().grid.markings.push({ yaxis: { from: this.autoMarkings.min, to: this.autoMarkings.max }, color: seriesColor.replace('rgb(','rgba(').replace(')',','+this.autoMarkings.minMaxAlpha+')') });
+	        			var marking = { color: seriesColor.replace('rgb(','rgba(').replace(')',','+this.autoMarkings.minMaxAlpha+')') };
+	        			marking[axis] = { from: this.autoMarkings.min, to: this.autoMarkings.max };
+	        			plot.getOptions().grid.markings.push(marking);
 	        		}
 	        		if( this.autoMarkings.showAvg === true && this.autoMarkings.avg!=Number.NaN)
 	        		{
-	        			if( this.autoMarkings.avg!=null )
-	        				plot.getOptions().grid.markings.push({ yaxis: { from: this.autoMarkings.avg, to: this.autoMarkings.avg }, color: seriesColor });
+	        			var marking = { color: seriesColor };
+	        			marking[axis] = { from: this.autoMarkings.avg, to: this.autoMarkings.avg };
+	        			plot.getOptions().grid.markings.push(marking);
 	        		}
         		}
         	});
