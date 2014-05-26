@@ -13,6 +13,23 @@ Download and include the javaScript-file on your page:
 ```
 
 ## Options ##
+Options can be set inside the 'series' option of the plot. Flot will then copy these to each series.
+```javascript
+var options = {
+  series: {
+    autoMarkings= {
+      enabled: true,
+        showMinMax: true,
+        showAvg: true
+    }
+  }
+};
+
+$.plot(placeholder, data, options);
+```
+
+Options can also be set for each series individually to e.g. enable autoMarkings on one series and disable on another. 
+
 ### enabled ###
 Enable or disable autoMarkings.  
 Value: true or false  
@@ -41,20 +58,3 @@ Value: [double]
 ### avg ###
 The average value of the series data. If not given the plugin will automatically calculate this value.  
 Value: [double]
-
-Options can be set inside the 'series' option of the plot. Flot will then copy these to each series.
-```javascript
-var options = {
-  series: {
-    autoMarkings= {
-      enabled: true,
-        showMinMax: true,
-        showAvg: true
-    }
-  }
-};
-
-$.plot(placeholder, data, options);
-```
-
-Options can also be set for each series individually to e.g. enable autoMarkings on one series and disable on another. 
