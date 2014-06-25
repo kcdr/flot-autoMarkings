@@ -1,6 +1,6 @@
 AutoMarkings Plugin for Flot
 =================
-This is a plugin for drawing markers for minimum/maximum range and average values of series with [flot](http://code.google.com/p/flot/).
+This is a plugin for drawing markers for minimum/maximum range and average values of series with [flot](http://www.flotcharts.org/).
 
 ## Example ##
 ![Example](/resources/autoMarkings_example.png)
