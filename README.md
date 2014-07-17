@@ -3,7 +3,7 @@ AutoMarkings Plugin for Flot
 This is a plugin for drawing markers for minimum/maximum range and average values of series with [flot](http://www.flotcharts.org/).
 
 ## Example ##
-![Example](kcdr.github.com/repository/flot-autoMarkings/img/autoMarkings_example.png)
+![Example](kcdr.github.io/flot-autoMarkings/img/autoMarkings_example.png)
 
 ## Installation ##
 [Download](https://raw.githubusercontent.com/kcdr/flot-autoMarkings/9f5deb8f54bbc77ee1d8b72910759dca079ecf7a/jquery.flot.autoMarkings.js) and include the javaScript-file on your page:
