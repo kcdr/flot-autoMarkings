@@ -1,79 +1,135 @@
 <!DOCTYPE html>
 <html>
-
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Flot-automarkings : AutoMarkings Plugin for Flot" />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Flot-automarkings</title>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Flot-automarkings by kcdr</title>
   </head>
 
   <body>
+    <div id="container">
+      <div class="inner">
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/kcdr/flot-autoMarkings">View on GitHub</a>
-
-          <h1 id="project_title">Flot-automarkings</h1>
-          <h2 id="project_tagline">AutoMarkings Plugin for Flot</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/kcdr/flot-autoMarkings/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/kcdr/flot-autoMarkings/tarball/master">Download this project as a tar.gz file</a>
-            </section>
+        <header>
+          <h1>Flot-automarkings</h1>
+          <h2>AutoMarkings Plugin for Flot</h2>
         </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/kcdr/flot-autoMarkings/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/kcdr/flot-autoMarkings/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/kcdr/flot-autoMarkings" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a name="automarkings-plugin-for-flot" class="anchor" href="#automarkings-plugin-for-flot"><span class="octicon octicon-link"></span></a>AutoMarkings Plugin for Flot</h1>
+
+<p>This is a plugin for drawing markers for minimum/maximum range and average values of series with <a href="http://www.flotcharts.org/">flot</a>.</p>
+
+<h2>
+<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
+
+<p><img src="http://kcdr.github.io/flot-autoMarkings/img/autoMarkings_example.png" alt="Example"></p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p><a href="https://raw.githubusercontent.com/kcdr/flot-autoMarkings/9f5deb8f54bbc77ee1d8b72910759dca079ecf7a/jquery.flot.autoMarkings.js">Download</a> and include the javaScript-file on your page:</p>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"[...]/jquery.flot.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"[...]/jquery.flot.autoMarkings.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+
+<h2>
+<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h2>
+
+<p>Options can be set inside the 'series' option of the plot. Flot will then copy these to each series.</p>
+
+<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">series</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">autoMarkings</span><span class="o">=</span> <span class="p">{</span>
+      <span class="nx">enabled</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nx">showMinMax</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nx">showAvg</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="nx">$</span><span class="p">.</span><span class="nx">plot</span><span class="p">(</span><span class="nx">placeholder</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
+</pre></div>
+
+<p>Options can also be set for each series individually to e.g. enable autoMarkings on one series and disable on another. </p>
+
+<h3>
+<a name="enabled" class="anchor" href="#enabled"><span class="octicon octicon-link"></span></a>enabled</h3>
+
+<p>Enable or disable autoMarkings.<br>
+Value: true or false<br>
+Default: false</p>
+
+<h3>
+<a name="color" class="anchor" href="#color"><span class="octicon octicon-link"></span></a>color</h3>
+
+<p>Color to use for drawing the marking of the series. If not given the plugin will use the color calculated by flot for each series.<br>
+Value: [String] e.g. "rgb(237,194,64)"]</p>
+
+<h3>
+<a name="showminmax" class="anchor" href="#showminmax"><span class="octicon octicon-link"></span></a>showMinMax</h3>
+
+<p>Draw a marking between the minimum and maximum of the series data.<br>
+Value: true or false<br>
+Default: false</p>
+
+<h3>
+<a name="minmaxalpha" class="anchor" href="#minmaxalpha"><span class="octicon octicon-link"></span></a>minMaxAlpha</h3>
+
+<p>Alpha value of minMax markings color.<br>
+Value: double<br>
+Default: 0.2</p>
+
+<h3>
+<a name="showavg" class="anchor" href="#showavg"><span class="octicon octicon-link"></span></a>showAvg</h3>
+
+<p>Draw a marking line for the average of the series data.<br>
+Value: true or false<br>
+Default: false</p>
+
+<h3>
+<a name="min" class="anchor" href="#min"><span class="octicon octicon-link"></span></a>min</h3>
+
+<p>The minimum value of the series data. If not given the plugin will automatically calculate this value.<br>
+Value: [double]</p>
+
+<h3>
+<a name="max" class="anchor" href="#max"><span class="octicon octicon-link"></span></a>max</h3>
+
+<p>The maximum value of the series data. If not given the plugin will automatically calculate this value.<br>
+Value: [double]</p>
+
+<h3>
+<a name="avg" class="anchor" href="#avg"><span class="octicon octicon-link"></span></a>avg</h3>
+
+<p>The average value of the series data. If not given the plugin will automatically calculate this value.<br>
+Value: [double]</p>
+        </section>
+
+        <footer>
+          Flot-automarkings is maintained by <a href="https://github.com/kcdr">kcdr</a><br>
+          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
     </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Flot-automarkings maintained by <a href="https://github.com/kcdr">kcdr</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
   </body>
 </html>
