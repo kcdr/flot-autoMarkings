@@ -3,12 +3,15 @@
  * 
  * Licensed under the MIT license.
  * 
+ * Version v0.2.1.dev
+ * 
  */
 
 (function ($) {
     function init(plot) {
 
         function autoMarkingsFunction(plot, offset) {
+        	plot.getOptions().grid.markings = new Array();
         	$(plot.getData()).each(function(){
         		if (this.autoMarkings && this.autoMarkings.enabled === true) {
                     if( plot.getOptions().grid.markings==null ) plot.getOptions().grid.markings = new Array();
