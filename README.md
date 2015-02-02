@@ -6,7 +6,7 @@ This is a plugin for drawing markers for minimum/maximum range and average value
 ![Example](http://kcdr.github.io/flot-autoMarkings/img/autoMarkings_example.png)
 
 ## Installation ##
-[Download](https://raw.githubusercontent.com/kcdr/flot-autoMarkings/9f5deb8f54bbc77ee1d8b72910759dca079ecf7a/jquery.flot.autoMarkings.js) and include the javaScript-file on your page:
+[Download](https://github.com/kcdr/flot-autoMarkings/raw/master/jquery.flot.autoMarkings.js) and include the javaScript-file on your page:
 ```html
 <script type="text/javascript" src="[...]/jquery.flot.min.js"></script>
 <script type="text/javascript" src="[...]/jquery.flot.autoMarkings.js"></script>
