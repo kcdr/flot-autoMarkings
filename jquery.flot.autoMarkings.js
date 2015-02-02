@@ -36,6 +36,7 @@
                     }
                     
                     var seriesColor = this.autoMarkings.color || this.color;
+                    var avgseriesColor = this.autoMarkings.avgcolor || this.color;
                     
                     var axis = "y"+(this.yaxis.n>1?this.yaxis.n:"")+"axis";
                     
@@ -47,7 +48,7 @@
 	        		}
 	        		if( this.autoMarkings.showAvg === true && this.autoMarkings.avg!=Number.NaN)
 	        		{
-	        			var marking = { color: seriesColor };
+	        			var marking = { color: avgseriesColor };
 	        			marking[axis] = { from: this.autoMarkings.avg, to: this.autoMarkings.avg };
 	        			plot.getOptions().grid.markings.push(marking);
 	        		}
