@@ -29,9 +29,9 @@
 	        					count++;
 	        					sum += this[1];
 	        				});
-	        				this.autoMarkings.min = min;
-	        				this.autoMarkings.max = max;
-	        				this.autoMarkings.avg = sum/count;
+	        				if( this.autoMarkings.min==null ) this.autoMarkings.min = min;
+	        				if( this.autoMarkings.max==null ) this.autoMarkings.max = max;
+	        				if( this.autoMarkings.avg==null ) this.autoMarkings.avg = sum/count;
 	        			}
                     }
                     
