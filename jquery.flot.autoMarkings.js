@@ -3,7 +3,7 @@
  * 
  * Licensed under the MIT license.
  * 
- * Version v0.2.2.dev
+ * Version v0.2.2
  * 
  */
 
