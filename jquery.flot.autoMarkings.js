@@ -3,7 +3,7 @@
  * 
  * Licensed under the MIT license.
  * 
- * Version v0.2.1.dev
+ * Version v0.2.2.dev
  * 
  */
 
@@ -64,6 +64,7 @@
     /** Options
      * enabled
      * color
+     * avgcolor
      * showMinMax
      * minMaxAlpha
      * showAvg
