@@ -77,6 +77,6 @@
         init: init,
         options: options,
         name: "autoMarkings",
-        version: "0.1"
+        version: "0.2.2"
     });
 })(jQuery);
