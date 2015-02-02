@@ -37,6 +37,9 @@ Default: false
 ### color ###
 Color to use for drawing the marking of the series. If not given the plugin will use the color calculated by flot for each series.  
 Value: [String] e.g. "rgb(237,194,64)"]
+### avgcolor ###
+Color to use for drawing the avewrage line of the series. If not given the plugin will use the color calculated by flot for each series.  
+Value: [String] e.g. "rgb(237,194,64)"]
 ### showMinMax ###
 Draw a marking between the minimum and maximum of the series data.  
 Value: true or false  
