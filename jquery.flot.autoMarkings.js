@@ -1,6 +1,8 @@
 /** AutoMarkings Plugin for flot
  * https://github.com/kcdr/flot-autoMarkings/edit/master/README.md
  * 
+ * Copyright (c) 2015 kcdr
+ * 
  * Licensed under the MIT license.
  * 
  * Version v0.2.2
