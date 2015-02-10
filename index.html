@@ -4,9 +4,9 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -32,92 +32,96 @@
 
         <section id="main_content">
           <h1>
-<a name="automarkings-plugin-for-flot" class="anchor" href="#automarkings-plugin-for-flot"><span class="octicon octicon-link"></span></a>AutoMarkings Plugin for Flot</h1>
+<a id="automarkings-plugin-for-flot" class="anchor" href="#automarkings-plugin-for-flot" aria-hidden="true"><span class="octicon octicon-link"></span></a>AutoMarkings Plugin for Flot</h1>
 
 <p>This is a plugin for drawing markers for minimum/maximum range and average values of series with <a href="http://www.flotcharts.org/">flot</a>.</p>
 
 <h2>
-<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h2>
 
 <p><img src="http://kcdr.github.io/flot-autoMarkings/img/autoMarkings_example.png" alt="Example"></p>
 
 <h2>
-<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
 
-<p><a href="https://raw.githubusercontent.com/kcdr/flot-autoMarkings/9f5deb8f54bbc77ee1d8b72910759dca079ecf7a/jquery.flot.autoMarkings.js">Download</a> and include the javaScript-file on your page:</p>
+<p><a href="https://github.com/kcdr/flot-autoMarkings/raw/master/jquery.flot.autoMarkings.js">Download</a> and include the javaScript-file on your page:</p>
 
-<div class="highlight highlight-html"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"[...]/jquery.flot.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"[...]/jquery.flot.autoMarkings.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</pre></div>
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>[...]/jquery.flot.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>[...]/jquery.flot.autoMarkings.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
 
 <h2>
-<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h2>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h2>
 
 <p>Options can be set inside the 'series' option of the plot. Flot will then copy these to each series.</p>
 
-<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">series</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">autoMarkings</span><span class="o">=</span> <span class="p">{</span>
-      <span class="nx">enabled</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nx">showMinMax</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nx">showAvg</span><span class="o">:</span> <span class="kc">true</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">};</span>
+<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> options <span class="pl-k">=</span> {
+  series<span class="pl-k">:</span> {
+    autoMarkings<span class="pl-k">=</span> {
+      enabled<span class="pl-k">:</span> <span class="pl-c1">true</span>,
+        showMinMax<span class="pl-k">:</span> <span class="pl-c1">true</span>,
+        showAvg<span class="pl-k">:</span> <span class="pl-c1">true</span>
+    }
+  }
+};
 
-<span class="nx">$</span><span class="p">.</span><span class="nx">plot</span><span class="p">(</span><span class="nx">placeholder</span><span class="p">,</span> <span class="nx">data</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>
-</pre></div>
+$.plot(placeholder, data, options);</pre></div>
 
 <p>Options can also be set for each series individually to e.g. enable autoMarkings on one series and disable on another. </p>
 
 <h3>
-<a name="enabled" class="anchor" href="#enabled"><span class="octicon octicon-link"></span></a>enabled</h3>
+<a id="enabled" class="anchor" href="#enabled" aria-hidden="true"><span class="octicon octicon-link"></span></a>enabled</h3>
 
 <p>Enable or disable autoMarkings.<br>
 Value: true or false<br>
 Default: false</p>
 
 <h3>
-<a name="color" class="anchor" href="#color"><span class="octicon octicon-link"></span></a>color</h3>
+<a id="color" class="anchor" href="#color" aria-hidden="true"><span class="octicon octicon-link"></span></a>color</h3>
 
 <p>Color to use for drawing the marking of the series. If not given the plugin will use the color calculated by flot for each series.<br>
 Value: [String] e.g. "rgb(237,194,64)"]</p>
 
 <h3>
-<a name="showminmax" class="anchor" href="#showminmax"><span class="octicon octicon-link"></span></a>showMinMax</h3>
+<a id="avgcolor" class="anchor" href="#avgcolor" aria-hidden="true"><span class="octicon octicon-link"></span></a>avgcolor</h3>
+
+<p>Color to use for drawing the avewrage line of the series. If not given the plugin will use the color calculated by flot for each series.<br>
+Value: [String] e.g. "rgb(237,194,64)"]</p>
+
+<h3>
+<a id="showminmax" class="anchor" href="#showminmax" aria-hidden="true"><span class="octicon octicon-link"></span></a>showMinMax</h3>
 
 <p>Draw a marking between the minimum and maximum of the series data.<br>
 Value: true or false<br>
 Default: false</p>
 
 <h3>
-<a name="minmaxalpha" class="anchor" href="#minmaxalpha"><span class="octicon octicon-link"></span></a>minMaxAlpha</h3>
+<a id="minmaxalpha" class="anchor" href="#minmaxalpha" aria-hidden="true"><span class="octicon octicon-link"></span></a>minMaxAlpha</h3>
 
 <p>Alpha value of minMax markings color.<br>
 Value: double<br>
 Default: 0.2</p>
 
 <h3>
-<a name="showavg" class="anchor" href="#showavg"><span class="octicon octicon-link"></span></a>showAvg</h3>
+<a id="showavg" class="anchor" href="#showavg" aria-hidden="true"><span class="octicon octicon-link"></span></a>showAvg</h3>
 
 <p>Draw a marking line for the average of the series data.<br>
 Value: true or false<br>
 Default: false</p>
 
 <h3>
-<a name="min" class="anchor" href="#min"><span class="octicon octicon-link"></span></a>min</h3>
+<a id="min" class="anchor" href="#min" aria-hidden="true"><span class="octicon octicon-link"></span></a>min</h3>
 
 <p>The minimum value of the series data. If not given the plugin will automatically calculate this value.<br>
 Value: [double]</p>
 
 <h3>
-<a name="max" class="anchor" href="#max"><span class="octicon octicon-link"></span></a>max</h3>
+<a id="max" class="anchor" href="#max" aria-hidden="true"><span class="octicon octicon-link"></span></a>max</h3>
 
 <p>The maximum value of the series data. If not given the plugin will automatically calculate this value.<br>
 Value: [double]</p>
 
 <h3>
-<a name="avg" class="anchor" href="#avg"><span class="octicon octicon-link"></span></a>avg</h3>
+<a id="avg" class="anchor" href="#avg" aria-hidden="true"><span class="octicon octicon-link"></span></a>avg</h3>
 
 <p>The average value of the series data. If not given the plugin will automatically calculate this value.<br>
 Value: [double]</p>
