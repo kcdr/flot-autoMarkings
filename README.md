@@ -17,7 +17,7 @@ Options can be set inside the 'series' option of the plot. Flot will then copy t
 ```javascript
 var options = {
   series: {
-    autoMarkings= {
+    autoMarkings: {
       enabled: true,
         showMinMax: true,
         showAvg: true
@@ -61,3 +61,7 @@ Value: [double]
 ### avg ###
 The average value of the series data. If not given the plugin will automatically calculate this value.  
 Value: [double]
+### lineWidth ###
+The lineWidth for the average value lines and other markers.
+Value: [int]
+Default: 2
