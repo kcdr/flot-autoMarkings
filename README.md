@@ -28,7 +28,7 @@ var options = {
 $.plot(placeholder, data, options);
 ```
 
-Options can also be set for each series individually to e.g. enable autoMarkings on one series and disable on another. 
+Options can also be set for each series individually to e.g. enable autoMarkings on one series and disable on another.
 
 ### enabled ###
 Enable or disable autoMarkings.  
@@ -38,7 +38,7 @@ Default: false
 Color to use for drawing the marking of the series. If not given the plugin will use the color calculated by flot for each series.  
 Value: [String] e.g. "rgb(237,194,64)"]
 ### avgcolor ###
-Color to use for drawing the avewrage line of the series. If not given the plugin will use the color calculated by flot for each series.  
+Color to use for drawing the average line of the series. If not given the plugin will use the color calculated by flot for each series.  
 Value: [String] e.g. "rgb(237,194,64)"]
 ### showMinMax ###
 Draw a marking between the minimum and maximum of the series data.  
