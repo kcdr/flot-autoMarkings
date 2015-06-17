@@ -62,6 +62,6 @@ Value: [double]
 The average value of the series data. If not given the plugin will automatically calculate this value.  
 Value: [double]
 ### lineWidth ###
-The lineWidth for the average value lines and other markers.
-Value: [int]
+The lineWidth for the average value lines and other markers.  
+Value: [int]  
 Default: 2
