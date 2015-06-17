@@ -1,37 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <meta charset="UTF-8">
     <title>Flot-automarkings by kcdr</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
-    <div id="container">
-      <div class="inner">
+    <section class="page-header">
+      <h1 class="project-name">Flot-automarkings</h1>
+      <h2 class="project-tagline">AutoMarkings Plugin for Flot</h2>
+      <a href="https://github.com/kcdr/flot-autoMarkings" class="btn">View on GitHub</a>
+      <a href="https://github.com/kcdr/flot-autoMarkings/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/kcdr/flot-autoMarkings/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-        <header>
-          <h1>Flot-automarkings</h1>
-          <h2>AutoMarkings Plugin for Flot</h2>
-        </header>
-
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/kcdr/flot-autoMarkings/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/kcdr/flot-autoMarkings/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/kcdr/flot-autoMarkings" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
-
-        <hr>
-
-        <section id="main_content">
-          <h1>
+    <section class="main-content">
+      <h1>
 <a id="automarkings-plugin-for-flot" class="anchor" href="#automarkings-plugin-for-flot" aria-hidden="true"><span class="octicon octicon-link"></span></a>AutoMarkings Plugin for Flot</h1>
 
 <p>This is a plugin for drawing markers for minimum/maximum range and average values of series with <a href="http://www.flotcharts.org/">flot</a>.</p>
@@ -46,17 +34,17 @@
 
 <p><a href="https://github.com/kcdr/flot-autoMarkings/raw/master/jquery.flot.autoMarkings.js">Download</a> and include the javaScript-file on your page:</p>
 
-<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>[...]/jquery.flot.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
-&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>[...]/jquery.flot.autoMarkings.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>[...]/jquery.flot.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>[...]/jquery.flot.autoMarkings.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
 
 <h2>
 <a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h2>
 
 <p>Options can be set inside the 'series' option of the plot. Flot will then copy these to each series.</p>
 
-<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> options <span class="pl-k">=</span> {
+<div class="highlight highlight-javascript"><pre><span class="pl-k">var</span> options <span class="pl-k">=</span> {
   series<span class="pl-k">:</span> {
-    autoMarkings<span class="pl-k">=</span> {
+    autoMarkings<span class="pl-k">:</span> {
       enabled<span class="pl-k">:</span> <span class="pl-c1">true</span>,
         showMinMax<span class="pl-k">:</span> <span class="pl-c1">true</span>,
         showAvg<span class="pl-k">:</span> <span class="pl-c1">true</span>
@@ -66,7 +54,7 @@
 
 $.plot(placeholder, data, options);</pre></div>
 
-<p>Options can also be set for each series individually to e.g. enable autoMarkings on one series and disable on another. </p>
+<p>Options can also be set for each series individually to e.g. enable autoMarkings on one series and disable on another.</p>
 
 <h3>
 <a id="enabled" class="anchor" href="#enabled" aria-hidden="true"><span class="octicon octicon-link"></span></a>enabled</h3>
@@ -84,7 +72,7 @@ Value: [String] e.g. "rgb(237,194,64)"]</p>
 <h3>
 <a id="avgcolor" class="anchor" href="#avgcolor" aria-hidden="true"><span class="octicon octicon-link"></span></a>avgcolor</h3>
 
-<p>Color to use for drawing the avewrage line of the series. If not given the plugin will use the color calculated by flot for each series.<br>
+<p>Color to use for drawing the average line of the series. If not given the plugin will use the color calculated by flot for each series.<br>
 Value: [String] e.g. "rgb(237,194,64)"]</p>
 
 <h3>
@@ -125,15 +113,23 @@ Value: [double]</p>
 
 <p>The average value of the series data. If not given the plugin will automatically calculate this value.<br>
 Value: [double]</p>
-        </section>
 
-        <footer>
-          Flot-automarkings is maintained by <a href="https://github.com/kcdr">kcdr</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
+<h3>
+<a id="linewidth" class="anchor" href="#linewidth" aria-hidden="true"><span class="octicon octicon-link"></span></a>lineWidth</h3>
 
-        
-      </div>
-    </div>
+<p>The lineWidth for the average value lines and other markers.<br>
+Value: [int]<br>
+Default: 2</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/kcdr/flot-autoMarkings">Flot-automarkings</a> is maintained by <a href="https://github.com/kcdr">kcdr</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
   </body>
 </html>
+
